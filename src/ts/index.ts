@@ -1,4 +1,5 @@
 import { notesToPlayInOrder } from "./music-to-play";
+import { Accidental } from './musical-score';
 
 function playMusic() {
     const notes = notesToPlayInOrder;
@@ -6,123 +7,176 @@ function playMusic() {
     // TODO Play these notes one after the other at the pitch and rhythm given in each note
 
     let beats = [];
-    let b = ["A5", "A4", "G5", "D4"];
     let finalBeat;
     var loop = 0;
 
-    // FOR LOOP TO ARRANGE THE NOTES
+    // FOR LOOP TO GET THE NOTES
     for (let i = 0; i < notes.length; i++) {
-
-        beats.push((notes[i].pitch).concat((notes[i].octave).toString()))
+        let a = notes[i].accidental
+        beats.push((notes[i].pitch).concat((notes[i].octave).toString()).concat(notes[i].accidental))
 
     }
 
     //console.log(beats)
 
-    // FOR LOOP TO GET ONLY THE UNIQUE NOTES & STORE IN FINAL ARRAY
+    // FOR LOOP TO FILTER ONLY THE UNIQUE NOTES & STORE IN FINAL ARRAY
     let finalArray = beats
 
     for (let i = 0; i < beats.length; i++) {
-
-        let d = beats[i]
+        //let d = beats[i]
         finalArray = finalArray.filter((element, i) => i === finalArray.indexOf(element))
 
     }
 
     //PLAY WITH UNIQUE NOTES
-    // console.log(finalArray)
+
+    //console.log(finalArray)
+
+    //PLAY 0
     for (let i = 0; i < finalArray.length; i++) {
         finalBeat = finalArray[i]
-        // console.log(finalBeat)
-
-        // let audio = document.getElementById(finalBeat) as HTMLAudioElement;
-        // audio.play();
-
-        //test = document.getElementById(finalArray[i]) as HTMLAudioElement;
+        //console.log(finalBeat)
+        play0(finalBeat)
     }
-
-    //STATIC TEST CODE
-
-    while (true) {
-        for (let i = 0; i < b.length; i++) {
-
-            let d = b[i]
-            console.log(d)
-            // play(d)
-        }
-        play(b[0])
-        play(b[1])
-        play(b[2])
-        play(b[3])
-
-        console.log("end of while")
+    //PLAY 1
+    for (let i = 0; i < finalArray.length; i++) {
+        finalBeat = finalArray[i]
+        play1(finalBeat)
     }
-
-    // 1. Select the div element using the id property
-    //const app = document.getElementsByClassName("audio-elements-holder");
+    //PLAY 0
+    for (let i = 0; i < finalArray.length; i++) {
+        finalBeat = finalArray[i]
+        play0(finalBeat)
+    }
+    //PLAY 2
+    for (let i = 0; i < finalArray.length; i++) {
+        finalBeat = finalArray[i]
+        play2(finalBeat)
+    }
+    //PLAY 1
+    for (let i = 0; i < finalArray.length; i++) {
+        finalBeat = finalArray[i]
+        play3(finalBeat)
+    }
+    //PLAY 3
+    for (let i = 0; i < finalArray.length; i++) {
+        finalBeat = finalArray[i]
+        play4(finalBeat)
+    }
+    //PLAY 0
+    for (let i = 0; i < finalArray.length; i++) {
+        finalBeat = finalArray[i]
+        play0(finalBeat)
+    }
 
 }
 
-function play(note: string) {
+function play0(note: string) {
 
-    console.log("Note, " + note);
-
-    //FOR NOTE 1
-    if (note === "A5") {
+    if (note === "D5") {
         let audio = document.getElementById(note) as HTMLAudioElement;
         audio.play();
-
+        console.log("playing ==> D5");
         setTimeout(function () {
             let audio = document.getElementById(note) as HTMLAudioElement;
             audio.pause();
-        }, 1000);
+        }, 6000);
     }
 
-    //FOR NOTE 2
-    else if (note === "A4") {
+}
+
+function play1(note: string) {
+
+    if (note === "D4") {
         let audio = document.getElementById(note) as HTMLAudioElement;
         audio.play();
-
+        console.log("playing ==> D4");
+        setTimeout(function () {
+            let audio = document.getElementById(note) as HTMLAudioElement;
+            audio.pause();
+        }, 4000);
+    }
+    else if (note === "A5") {
+        let audio = document.getElementById(note) as HTMLAudioElement;
+        audio.play();
+        console.log("playing ==> A5");
         setTimeout(function () {
             let audio = document.getElementById(note) as HTMLAudioElement;
             audio.pause();
         }, 3000);
-
-    }
-
-    //FOR NOTE 1
-    else if (note === "G5") {
-        let audio = document.getElementById(note) as HTMLAudioElement;
-        audio.play();
-
-        setTimeout(function () {
-            let audio = document.getElementById(note) as HTMLAudioElement;
-            audio.pause();
-        }, 1000);
-    }
-
-    //FOR NOTE 1
-    else if (note === "D4") {
-        let audio = document.getElementById(note) as HTMLAudioElement;
-        audio.play();
-
-        setTimeout(function () {
-            let audio = document.getElementById(note) as HTMLAudioElement;
-            audio.pause();
-        }, 500);
-    }
-
-    //FOR NOTE 1
-    else if (note === "A5") {
-        let audio = document.getElementById(note) as HTMLAudioElement;
-        audio.play();
-
-        setTimeout(function () {
-            let audio = document.getElementById(note) as HTMLAudioElement;
-            audio.pause();
-        }, 1000);
     }
 
 }
+
+function play2(note: string) {
+
+    if (note === "B4F") {
+        let audio = document.getElementById(note) as HTMLAudioElement;
+        audio.play();
+        console.log("playing ==> B4F");
+        setTimeout(function () {
+            let audio = document.getElementById(note) as HTMLAudioElement;
+            audio.pause();
+        }, 2000);
+    }
+
+    else if (note === "B5F") {
+        let audio = document.getElementById(note) as HTMLAudioElement;
+        audio.play();
+        console.log("playing ==> B5F");
+        setTimeout(function () {
+            let audio = document.getElementById(note) as HTMLAudioElement;
+            audio.pause();
+        }, 3000);
+    }
+
+    else if (note === "F5S") {
+        let audio = document.getElementById(note) as HTMLAudioElement;
+        audio.play();
+        console.log("playing ==> F5S");
+        setTimeout(function () {
+            let audio = document.getElementById(note) as HTMLAudioElement;
+            audio.pause();
+        }, 4000);
+    }
+}
+
+function play3(note: string) {
+
+    if (note === "A4") {
+        let audio = document.getElementById(note) as HTMLAudioElement;
+        audio.play();
+        console.log("playing ==> A4");
+        setTimeout(function () {
+            let audio = document.getElementById(note) as HTMLAudioElement;
+            audio.pause();
+        }, 2000);
+    }
+
+    else if (note === "F5") {
+        let audio = document.getElementById(note) as HTMLAudioElement;
+        audio.play();
+        console.log("playing ==> F5");
+        setTimeout(function () {
+            let audio = document.getElementById(note) as HTMLAudioElement;
+            audio.pause();
+        }, 7000);
+    }
+}
+
+function play4(note: string) {
+
+    if (note === "C5") {
+        let audio = document.getElementById(note) as HTMLAudioElement;
+        audio.play();
+        console.log("playing ==> C5");
+        setTimeout(function () {
+            let audio = document.getElementById(note) as HTMLAudioElement;
+            audio.pause();
+        }, 8000);
+    }
+
+}
+
 
 document.getElementById('start-playing')?.addEventListener('click', playMusic);

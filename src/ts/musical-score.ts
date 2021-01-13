@@ -12,12 +12,13 @@ export enum Accidental {
     SHARP = 'S',
     FLAT = 'F',
     NATURAL = 'N',
+    BLANK = ''
 };
 
 export interface MusicalNote {
     pitch: Pitch;
     octave: number;
-    accidental?: Accidental;
+    accidental: Accidental;
     beats: number;
 };
 

@@ -3,10 +3,12 @@ import { MusicalNote, Pitch, Accidental } from "./musical-score";
 export const notesToPlayInOrder: Array<MusicalNote> = [{
     pitch: Pitch.G,
     octave: 4,
+    accidental: Accidental.BLANK,
     beats: 5,
 }, {
     pitch: Pitch.D,
     octave: 4,
+    accidental: Accidental.BLANK,
     beats: 1,
 }, {
     pitch: Pitch.B,
@@ -16,14 +18,17 @@ export const notesToPlayInOrder: Array<MusicalNote> = [{
 }, {
     pitch: Pitch.A,
     octave: 4,
+    accidental: Accidental.BLANK,
     beats: 6,
 }, {
     pitch: Pitch.F,
     octave: 4,
+    accidental: Accidental.BLANK,
     beats: 1,
 }, {
     pitch: Pitch.C,
     octave: 5,
+    accidental: Accidental.BLANK,
     beats: 1,
 }, {
     pitch: Pitch.B,
@@ -38,14 +43,17 @@ export const notesToPlayInOrder: Array<MusicalNote> = [{
 }, {
     pitch: Pitch.C,
     octave: 5,
+    accidental: Accidental.BLANK,
     beats: 1,
 }, {
     pitch: Pitch.D,
     octave: 5,
+    accidental: Accidental.BLANK,
     beats: 1,
 }, {
     pitch: Pitch.F,
     octave: 5,
+    accidental: Accidental.BLANK,
     beats: 1.5,
 }, {
     pitch: Pitch.D,
@@ -55,14 +63,17 @@ export const notesToPlayInOrder: Array<MusicalNote> = [{
 }, {
     pitch: Pitch.A,
     octave: 4,
+    accidental: Accidental.BLANK,
     beats: 2,
 }, {
     pitch: Pitch.C,
     octave: 5,
+    accidental: Accidental.BLANK,
     beats: 1,
 }, {
     pitch: Pitch.D,
     octave: 5,
+    accidental: Accidental.BLANK,
     beats: 1,
 }, {
     pitch: Pitch.D,
@@ -72,6 +83,7 @@ export const notesToPlayInOrder: Array<MusicalNote> = [{
 }, {
     pitch: Pitch.G,
     octave: 5,
+    accidental: Accidental.BLANK,
     beats: 5,
 }, {
     pitch: Pitch.D,
@@ -86,6 +98,7 @@ export const notesToPlayInOrder: Array<MusicalNote> = [{
 }, {
     pitch: Pitch.G,
     octave: 5,
+    accidental: Accidental.BLANK,
     beats: 1,
 }, {
     pitch: Pitch.B,
@@ -95,10 +108,12 @@ export const notesToPlayInOrder: Array<MusicalNote> = [{
 }, {
     pitch: Pitch.A,
     octave: 5,
+    accidental: Accidental.BLANK,
     beats: 4,
 }, {
     pitch: Pitch.D,
     octave: 5,
+    accidental: Accidental.BLANK,
     beats: 12,
 }, {
     pitch: Pitch.B,
@@ -108,10 +123,12 @@ export const notesToPlayInOrder: Array<MusicalNote> = [{
 }, {
     pitch: Pitch.C,
     octave: 5,
+    accidental: Accidental.BLANK,
     beats: 1,
 }, {
     pitch: Pitch.D,
     octave: 5,
+    accidental: Accidental.BLANK,
     beats: 1,
 }, {
     pitch: Pitch.B,
@@ -121,6 +138,7 @@ export const notesToPlayInOrder: Array<MusicalNote> = [{
 }, {
     pitch: Pitch.F,
     octave: 5,
+    accidental: Accidental.BLANK,
     beats: 3,
 }, {
     pitch: Pitch.D,
@@ -130,10 +148,12 @@ export const notesToPlayInOrder: Array<MusicalNote> = [{
 }, {
     pitch: Pitch.D,
     octave: 5,
+    accidental: Accidental.BLANK,
     beats: 2,
 }, {
     pitch: Pitch.C,
     octave: 5,
+    accidental: Accidental.BLANK,
     beats: 3,
 }, {
     pitch: Pitch.B,
@@ -143,10 +163,12 @@ export const notesToPlayInOrder: Array<MusicalNote> = [{
 }, {
     pitch: Pitch.A,
     octave: 4,
+    accidental: Accidental.BLANK,
     beats: 2,
 }, {
     pitch: Pitch.A,
     octave: 4,
+    accidental: Accidental.BLANK,
     beats: 3,
 }, {
     pitch: Pitch.B,
@@ -161,10 +183,12 @@ export const notesToPlayInOrder: Array<MusicalNote> = [{
 }, {
     pitch: Pitch.C,
     octave: 5,
+    accidental: Accidental.BLANK,
     beats: 1,
 }, {
     pitch: Pitch.D,
     octave: 5,
+    accidental: Accidental.BLANK,
     beats: 1,
 }, {
     pitch: Pitch.B,
@@ -174,6 +198,7 @@ export const notesToPlayInOrder: Array<MusicalNote> = [{
 }, {
     pitch: Pitch.F,
     octave: 5,
+    accidental: Accidental.BLANK,
     beats: 3,
 }, {
     pitch: Pitch.D,
@@ -183,10 +208,12 @@ export const notesToPlayInOrder: Array<MusicalNote> = [{
 }, {
     pitch: Pitch.D,
     octave: 5,
+    accidental: Accidental.BLANK,
     beats: 2,
 }, {
     pitch: Pitch.C,
     octave: 5,
+    accidental: Accidental.BLANK,
     beats: 3,
 }, {
     pitch: Pitch.B,
@@ -196,10 +223,12 @@ export const notesToPlayInOrder: Array<MusicalNote> = [{
 }, {
     pitch: Pitch.D,
     octave: 4,
+    accidental: Accidental.BLANK,
     beats: 1,
 }, {
     pitch: Pitch.G,
     octave: 4,
+    accidental: Accidental.BLANK,
     beats: 1,
 }, {
     pitch: Pitch.B,
@@ -209,9 +238,11 @@ export const notesToPlayInOrder: Array<MusicalNote> = [{
 }, {
     pitch: Pitch.A,
     octave: 4,
+    accidental: Accidental.BLANK,
     beats: 3,
 }, {
     pitch: Pitch.G,
     octave: 4,
+    accidental: Accidental.BLANK,
     beats: 12,
 }];
