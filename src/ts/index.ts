@@ -1,13 +1,12 @@
 import { notesToPlayInOrder } from "./music-to-play";
-import { Accidental } from './musical-score';
 
 function playMusic() {
     const notes = notesToPlayInOrder;
 
     // TODO Play these notes one after the other at the pitch and rhythm given in each note
 
-    let beats = [];
-    let finalBeat;
+    var beats = [];
+    var finalBeat;
     var loop = 0;
 
     // FOR LOOP TO GET THE NOTES
@@ -43,22 +42,17 @@ function playMusic() {
         finalBeat = finalArray[i]
         play1(finalBeat)
     }
-    //PLAY 0
-    for (let i = 0; i < finalArray.length; i++) {
-        finalBeat = finalArray[i]
-        play0(finalBeat)
-    }
     //PLAY 2
     for (let i = 0; i < finalArray.length; i++) {
         finalBeat = finalArray[i]
         play2(finalBeat)
     }
-    //PLAY 1
+    //PLAY 3
     for (let i = 0; i < finalArray.length; i++) {
         finalBeat = finalArray[i]
         play3(finalBeat)
     }
-    //PLAY 3
+    //PLAY 4
     for (let i = 0; i < finalArray.length; i++) {
         finalBeat = finalArray[i]
         play4(finalBeat)
@@ -80,7 +74,7 @@ function play0(note: string) {
         setTimeout(function () {
             let audio = document.getElementById(note) as HTMLAudioElement;
             audio.pause();
-        }, 6000);
+        }, 2000);
     }
 
 }
@@ -103,7 +97,7 @@ function play1(note: string) {
         setTimeout(function () {
             let audio = document.getElementById(note) as HTMLAudioElement;
             audio.pause();
-        }, 3000);
+        }, 5000);
     }
 
 }
@@ -127,7 +121,7 @@ function play2(note: string) {
         setTimeout(function () {
             let audio = document.getElementById(note) as HTMLAudioElement;
             audio.pause();
-        }, 3000);
+        }, 1000);
     }
 
     else if (note === "F5S") {
@@ -137,7 +131,7 @@ function play2(note: string) {
         setTimeout(function () {
             let audio = document.getElementById(note) as HTMLAudioElement;
             audio.pause();
-        }, 4000);
+        }, 1000);
     }
 }
 
@@ -173,7 +167,7 @@ function play4(note: string) {
         setTimeout(function () {
             let audio = document.getElementById(note) as HTMLAudioElement;
             audio.pause();
-        }, 8000);
+        }, 6000);
     }
 
 }
